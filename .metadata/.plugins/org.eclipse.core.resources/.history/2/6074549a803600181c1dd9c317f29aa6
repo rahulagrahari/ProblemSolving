@@ -1,0 +1,11 @@
+import it.si3p.supwsd.SupWSD;
+
+public class test {
+	
+	
+   public static void main(String[] args) throws Exception {
+	   SupWSD.train(conf, corpus, keys);
+}
+	
+
+}

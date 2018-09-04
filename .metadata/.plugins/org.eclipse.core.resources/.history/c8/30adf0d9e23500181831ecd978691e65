@@ -1,0 +1,10 @@
+import it.si3p.supwsd.SupWSD;
+public class test {
+	
+	
+   public static void main(String[] args) throws Exception {
+	   SupWSD.train("config file path", "dataset file path", "keys file path");
+}
+	
+
+}

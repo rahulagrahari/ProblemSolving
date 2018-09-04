@@ -1,0 +1,49 @@
+package DS2;
+
+import java.util.ArrayList;
+
+public class SubString {
+
+	public static ArrayList<Character> subString(char[] ch, int i, int j) {
+		
+		ArrayList<Character> longestSubString = new ArrayList<Character>();
+		if(i==j) {
+			longestSubString.add(ch[i]);
+			return longestSubString;
+		}
+		else {
+			ArrayList<Character> temp1 = new ArrayList<Character>();
+			ArrayList<Character> temp = new ArrayList<Character>();
+			temp1=subString(ch, i+1,j);
+				if(!temp1.contains(ch[i])) {
+					longestSubString.add(ch[i]);
+					longestSubString.addAll(temp1);
+					return longestSubString;}
+				else  {
+					temp=subString(ch, 0, i+1);
+					if (temp1.size()<=temp.size()) {
+						longestSubString.add(ch[i]);
+						longestSubString.addAll(temp);
+						return longestSubString;}
+					else {
+						longestSubString.add(ch[i]);
+						longestSubString.addAll(temp1);
+						return longestSubString;
+					}
+				}
+			
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abcbd";
+		ArrayList<Character> longestSubString = subString(s.toCharArray(), 0, s.toCharArray().length-1);
+		for(char i : longestSubString) {
+			System.out.print(i);
+		}
+		
+	}
+
+}

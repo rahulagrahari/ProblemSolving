@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+public class ThreadDemo{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		myThread t = new myThread();
+//		t.run();
+//		for(int i=0; i<10; i++) {
+//			System.out.println("main thread");
+//		}
+		
+		
+//		Thread.currentThread().setPriority(10);
+//		System.out.println(Thread.currentThread().getPriority());
+		Dog dog = new Dog();
+		Animal o = new Dog();
+		dog.setName("ferro");
+		o.dance();
+		
+		
+		String s="a";
+		s.su
+		((Animal)dog).dance();
+	} 
+
+}

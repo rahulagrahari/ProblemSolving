@@ -1,0 +1,8 @@
+package io.learnSpring.springbootstarter.Topiccontroller;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface TopicRepository extends CrudRepository {
+
+	
+}

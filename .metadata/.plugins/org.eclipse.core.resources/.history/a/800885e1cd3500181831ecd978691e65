@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<supWSD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="supconfig.xsd">
+	<working_directory></working_directory>
+	<parser mns="">lexical</parser>
+	<preprocessing>
+		<splitter model="">open_nlp</splitter>
+		<tokenizer model="">open_nlp</tokenizer>
+		<tagger model="">open_nlp</tagger>
+		<lemmatizer model="">open_nlp</lemmatizer>
+		<dependency_parser model="">stanford</dependency_parser>
+	</preprocessing>
+	<extraction>
+		<features>
+			<pos_tags cutoff="0">true</pos_tags>
+			<local_collocations cutoff="0">true</local_collocations>
+			<surrounding_words cutoff="0" window="5">true</surrounding_words>
+			<word_embeddings strategy="AVG" window="5"
+				vectors=""
+				vocab="" cache="1">true</word_embeddings>
+			<syntactic_relations>true</syntactic_relations>
+		</features>
+	</extraction>
+	<classifier>libsvm</classifier>
+	<writer>single</writer>
+	<sense_inventory
+		dict="C:\\Program Files (x86)\\WordNet\\2.1\\bin">wordnet</sense_inventory>
+</supWSD>

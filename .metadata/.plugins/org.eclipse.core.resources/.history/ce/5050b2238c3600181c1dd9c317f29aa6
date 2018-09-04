@@ -1,0 +1,50 @@
+import it.si3p.supwsd.SupWSD;
+import it.si3p.supwsd.data.SupInventory;
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import it.si3p.supwsd.SupResult;
+import it.si3p.supwsd.SupSense;
+
+
+public class test {
+	
+	
+   public static void main(String[] args) throws IOException {
+	   
+	   String csvFile = "C:\\Users\\agrah\\Dropbox\\Intelligent System\\Text Analytics\\Text_Analytics\\table_wcnmdy.txt";
+       BufferedReader br = null;
+       String line = "";
+       String cvsSplitBy = ";";
+       
+       br = new BufferedReader(new FileReader(csvFile));
+       
+       while ((line = br.readLine()) != null) {
+
+           // use comma as separator
+           String[] country = line.split(cvsSplitBy);
+
+           System.out.println("Country [code= " + country[4] + " , name=" + country[5] + "]");
+       }
+	   
+//	   SupWSD sWSD = SupWSD.getInstance();
+//	   
+//	   List<SupSense> sSenses = sWSD.getSenses("he was asked to fill out a <SENSE>form<SENSE>",false ,SupInventory.WN);
+//
+//	   System.out.println(sSenses);
+	   
+//	   String text = "he was asked to fill out a <SENSE>form<SENSE>";
+//		SupWSD swsd = SupWSD.getInstance();
+//		for (SupSense sense : swsd.getSenses(text,true)) {
+//			System.out.println("Word: " + sense.getWord() + "\tLemma: " + sense.getLemma() + "\tPOS: " + sense.getPOS());
+//			for (SupResult result : sense.getResults()) {
+//				System.out.println("SenseKey " + result.getKey() + "\tProbability: " + result.getProbability());
+//			}
+//		}
+	}	
+}
+	
+
+

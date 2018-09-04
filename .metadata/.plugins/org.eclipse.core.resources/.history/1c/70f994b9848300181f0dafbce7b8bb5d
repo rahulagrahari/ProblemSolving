@@ -1,0 +1,21 @@
+
+public class Dog extends Animal{
+
+	@Override
+	public void shout() {
+		System.out.println("bhow bhow");;
+		
+	}
+	
+	public void bark() {
+		System.out.println("dog is barking");
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		return true;
+	}
+	
+	
+
+}

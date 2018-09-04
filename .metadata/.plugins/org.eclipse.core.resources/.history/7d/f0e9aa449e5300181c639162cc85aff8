@@ -1,0 +1,31 @@
+package io.learnSpring.springbootstarter.Topiccontroller;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Set;
+
+public class test {
+
+	public static void main(String[] args) {
+//		HashMap<Integer, Integer> h = new LinkedHashMap();
+//		h.put(1, 101);
+//		h.put(2, 107);
+//		h.put(3, 102);
+//		h.put(4, 140);
+//		
+//		for(Integer i:h.keySet()) {
+//			System.out.println("key is "+i+" and value is "+h.get(i));
+//		}
+//		
+//		System.out.println(h.size());
+//		h.remove(1);
+//		System.out.println(h.size());
+		String s = "this is rahul";
+		StringBuilder ss = new StringBuilder();
+		if(s.contains(" ")) {
+			ss.append(s.replace((char) 32,'a'));
+		}
+		System.out.println(ss);
+	}
+}

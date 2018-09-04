@@ -1,0 +1,31 @@
+package DS2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class firstuniqueCharacter {
+	
+	
+	public static void uniqueCharacter(String str) {
+		
+		char[] c = str.toCharArray();
+		List<Character> temp = new ArrayList<Character>();
+		
+		for(char i : c) {
+			if(!temp.contains(i)) {
+				temp.add(i);
+			}
+			else {
+				temp.remove(i);
+			}
+		}
+		
+		System.out.println(temp.get(0));
+	
+	}
+	
+	public static void main(String[] args) {
+		uniqueCharacter("AABCCD");
+	}
+
+}

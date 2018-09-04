@@ -1,0 +1,32 @@
+import it.si3p.supwsd.SupWSD;
+
+import java.util.List;
+
+import it.si3p.supwsd.SupResult;
+import it.si3p.supwsd.SupSense;
+
+
+public class test {
+	
+	
+   public static void main(String[] args) throws Exception {
+	   
+//	   SupWSD sWSD = SupWSD.getInstance();
+//	   
+//	   List<SupSense> sSenses = sWSD.getSenses("The human brain is quite proficient at word-sense disambiguation.");
+//
+//	   System.out.println(sSenses);
+	   
+	   String text = "he was asked to fill out a <SENSE>form<SENSE>";
+		SupWSD swsd = SupWSD.getInstance();
+		for (SupSense sense : swsd.getSenses(text,true)) {
+			System.out.println("Word: " + sense.getWord() + "\tLemma: " + sense.getLemma() + "\tPOS: " + sense.getPOS());
+			for (SupResult result : sense.getResults()) {
+				System.out.println("SenseKey " + result.getKey() + "\tProbability: " + result.getProbability());
+			}
+		}
+	}	
+}
+	
+
+

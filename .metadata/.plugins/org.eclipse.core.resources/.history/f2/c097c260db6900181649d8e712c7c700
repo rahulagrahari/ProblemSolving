@@ -1,0 +1,10 @@
+package DS2;
+
+public class uniqueChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

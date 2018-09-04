@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;InformationRetrieval2&apos;" deleteContents="false" description="Delete resource &apos;InformationRetrieval2&apos;" element1="/InformationRetrieval2" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1524227220253"/>&#x0A;<refactoring comment="Delete resource &apos;supervised-wsd&apos;" deleteContents="false" description="Delete resource &apos;supervised-wsd&apos;" element1="/supervised-wsd" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1524227229248"/>
+</session>

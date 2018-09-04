@@ -1,0 +1,54 @@
+package io.learnSpring.springbootstarter.Topiccontroller;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TopicService {
+
+	@Autowired
+	private TopicRepository topicRepo;
+	
+	List<Topic> topics = new ArrayList<Topic> (Arrays.asList(
+			new Topic("1", "rahul", "rahul learning the spring"),
+			new Topic("2", "ashish", "ashish learning the spring"),
+			new Topic("3", "amit", "amit learning the spring")
+			));
+	
+	public List<Topic> getAllTopics() {
+		List<Topic> topic = new ArrayList<>();
+		
+		Iterable t = topicRepo.findAll();
+		t.forEach(tt->topic.add((Topic) tt));
+		return topic;
+		
+	}
+	
+	public Topic getTopicById(String id) {
+		return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+				
+	}
+
+	public void addTopics(Topic topic) {
+		topics.add(topic);
+		
+	}
+
+	public void updateTopic(String id, String newid) {
+		Topic t1 = topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+		t1.setId(newid);
+		
+	}
+
+	public void deleteTopic(String id) {
+		topics.removeIf(t -> t.getId().equals(id));	
+		
+	}
+		
+	
+	
+}
