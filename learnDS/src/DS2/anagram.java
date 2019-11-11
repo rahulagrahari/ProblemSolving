@@ -11,8 +11,11 @@ import java.util.Set;
 public class anagram {
 
 	public static int anagram(String a, String b) {
-		
-		mergeSort sort = new mergeSort(); 
+
+		if (a.length() != b.length()){
+			System.exit(1);
+		}
+		mergeSort sort = new mergeSort();
 		char[] s1 = a.toCharArray();
 		char[] s2 = b.toCharArray();
 		Arrays.sort(s1);

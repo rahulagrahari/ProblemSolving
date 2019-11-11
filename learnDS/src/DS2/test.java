@@ -37,12 +37,12 @@ public class test {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int num = 40;
-		long[] memo = new long[num];
-		Date start = new Date();
-		System.out.println(test.fib(num,memo));
-		Date end = new Date();
-		System.out.println(end.getTime()-start.getTime()+" total time in millisecond");
+//		int num = 40;
+//		long[] memo = new long[num];
+//		Date start = new Date();
+//		System.out.println(test.fib(num,memo));
+//		Date end = new Date();
+		System.out.println(" total time in millisecond");
 
 	}
 

@@ -82,7 +82,7 @@ public static int memrec(int size, int k, int l, int i,int j, Map<String, Intege
 		}
 		else {
 			int[] arr = validPath(i, j, size);
-			if(arr[0]==-1 &&arr[1]==-1) {
+			if(arr[0]==-1 && arr[1]==-1) {
 				cost2=shortPath(size, k, l, arr[2],arr[3],matrix);
 				cost2=cost2+matrix[arr[2]][arr[3]];
 				return cost2;

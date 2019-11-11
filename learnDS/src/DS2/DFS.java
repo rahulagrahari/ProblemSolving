@@ -25,16 +25,16 @@ public class DFS {
 		while(s.isEmpty()==false) {
 			int item = s.pop();
 			i = item;
-			visited.add(i); 
-			if(i==k) {
-				break;
-			}
+			visited.add(i);
+//			if(i==k) {
+//				break;
+//			}
 			path = getValidPath(matrix, i, k);
 			for(int m=path.size()-1;m>=0;m--)
 			{
 				if(!visited.contains(path.get(m))) {
 					s.push(path.get(m));
-					
+
 				}
 			}
 			
@@ -45,7 +45,7 @@ public class DFS {
 	
 	public static ArrayList<Integer> breadthFirstSearch(int[][] matrix,int k, int i) {
 		ArrayList<Integer> visited = new ArrayList<Integer>();
-		ArrayList<Integer> path = new ArrayList<Integer>();
+		ArrayList<Integer> path;
 		LinkedList ll = new LinkedList();
 		visited.add(i);
 		ll.insert(i);
@@ -103,12 +103,12 @@ public class DFS {
 			{
 			{0,1,1,0,0,0},
 			{0,0,0,1,1,0},
-			{0,0,0,1,0,0},
+			{0,0,0,0,1,0},
 			{0,0,0,0,0,1},
 			{0,0,0,0,0,1},
 			{0,0,0,0,0,0}
 			};
-		ArrayList<Integer> arr = allPath(matrix, 5, 0);
+		ArrayList<Integer> arr = depthFirstSearch(matrix, 5, 0);
 		int s = arr.size();
 		for(int i : arr) {
 			if(s-1==0) {

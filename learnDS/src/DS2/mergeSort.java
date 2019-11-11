@@ -5,7 +5,7 @@ import javax.lang.model.element.QualifiedNameable;
 public class mergeSort {
 	
 	
-	public static char[] quicksort(char[] a, int i, int j) {
+	public static int[] quicksort(int[] a, int i, int j) {
 		int k;
 		
 		if(i<j) {
@@ -17,10 +17,10 @@ public class mergeSort {
 	}
 	
 	 
-	private static int partition(char[] arr, int start, int last) {
+	private static int partition(int[] arr, int start, int last) {
 		int i = start;
 		int j=last;
-		char pivot;
+		int pivot;
 		pivot=arr[i];
 		while(i<j) {
 			do {
@@ -39,16 +39,22 @@ public class mergeSort {
 			}
 			
 			 if(arr[i]>arr[j] && i<j) {
-				char temp = arr[i];
+				int temp = arr[i];
 				arr[i]=arr[j];
 				arr[j]=temp;
 			}
 				
 		}
-		char temp = pivot;
+		int temp = pivot;
 		arr[start]=arr[j];
 		arr[j]=temp;
 		return j;
+	}
+
+	public static void main(String[] args) {
+		int[] a = {5,4,3,6,8,1};
+		mergeSort.quicksort(a, 0 , a.length-1);
+
 	}
 
 }
